@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaiTap</title>
+</head>
+<body>
+<h1>BÀI 1
+// Cách 1 //
+</h1>
+<script>
+  let nhapDiemHoa;
+  let nhapDiemLy;
+  let nhapDiemToan;
+  nhapDiemHoa=prompt('Nhập điểm hóa vào đây ạ!');
+  nhapDiemLy=prompt('Xong điểm toán vào đây!');
+  nhapDiemToan=prompt('Nốt điểm toán nhanh lên!');
+  let a=parseInt(nhapDiemHoa);
+  let b=parseInt(nhapDiemLy);
+  let c=parseInt(nhapDiemToan)
+  let diemtb=(a+b+c)/3
+  document.write('Điểm trung bình của m là:'+ diemtb);
+  let diemth=a+b+c
+document.write('Và tổng điểm là:' + diemth)
+</script>
+<br/>
+//Cách 2//
+<h1 id="dtb"></h1>
+<p>Điểm lý</p>
+ <input type="text" id="ly">
+<p>Điểm hóa</p>
+ <input type="text" id="hoa">
+<p>Điểm sinh</p>
+ <input type="text" id="sinh">
+ <button onclick="diemTrungBinh()">Click</button>
+<script>
+    function diemTrungBinh(){
+        let diemLy =+document.getElementById('ly').value;
+        console.log("diem ly>>>>>",diemLy)
+        let diemHoa =+document.getElementById('hoa').value;
+        console.log("diem hoa>>>>>",diemHoa)
+        let diemSinh =+document.getElementById('sinh').value;
+        console.log("diem sinh>>>>>",diemSinh)
+        let DTB=(diemSinh+diemLy+diemHoa)/3
+        document.getElementById('dtb').innerHTML="ĐIỂM TRUNG BÌNH LÀ:"+DTB
+    }
+</script>
+<br/>!
+
+<h1>BÀI 2</h1>
+
+<script>
+    let nhapBankinh;
+  nhapBankinh=prompt('Nhập bán kính vào đây!');
+    let r=parseInt(nhapBankinh)
+   const PI = 3.14159
+  let dt=r*r*PI;
+  document.write('Hình tròn có diện tích là:' + dt);
+</script> <br/>
+
+<h1>BÀI 3</h1>
+<!--Cách 1-->
+<script>
+    let nhapdoC;
+    nhapdoC=prompt('NHẬP ĐỘ C VÀO ĐÂY NÀY!')
+    let C=parseInt(nhapdoC);
+    let F=9/5*C+32;
+    document.write('ĐỘ F SẼ LÀ:' + F)
+</script>
+
+<!--Cách 2-->
+    <h2>NHẬP ĐỘ C VÀO ĐÂY NÀY</h2>
+<input type="text" id="doC">
+ <h2 id="doF"></h2>
+<button onclick="nhietDo()">  ĐỔI</button>
+
+<script>
+    function nhietDo(){
+        let C= +document.getElementById('doC').value;
+
+        let F=9/5*C+32;
+        document.getElementById('doF').innerHTML="ĐỘ F ="+ F
+    }
+
+
+</script>
+<h1>BÀI 4</h1>
+<script>
+    let nhapbankinh;
+    nhapbankinh=prompt('NHẬP BÁN KÍNH VÀO ĐÂY');
+    let R=parseInt(nhapbankinh);
+    const PI2=3.14
+    let CV=R*2*PI2
+    document.write("CHU VI HÌNH TRÒN LÀ:" + CV);
+</script>
+</body>
+</html>
