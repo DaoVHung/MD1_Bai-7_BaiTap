@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+<input type="text" id="nhaptien">
+
+<select onchange="khibamnut()" id="chon1">
+  <option value="vnd">viet nam</option>
+  <option value="usd"> my</option>
+</select>
+
+<select onchange="khibamnut()" id="chon2">
+  <option value="vnd">viet nam</option>
+  <option value="usd">my</option>
+</select>
+
+<button onclick="khibamnut()">CHUYỂN TIỀN</button>
+
+
+</div>
+</body>
+<script>
+    function khibamnut() {
+        let nhapsotien = document.getElementById('nhaptien').value;
+        let chon1 = document.getElementById('chon1').value;
+        let chon2 = document.getElementById('chon2').value;
+        if (chon1 == chon2)
+            document.write('SỐ TIỀN LÀ:' + nhapsotien)
+        if (chon1 == "vnd" && chon2 == "usd") {
+            document.write('SỐ TIỀN LÀ:' + nhapsotien / 32000 + '' + 'usd');
+        }
+        if (chon1 == "usd" && chon2 == "vnd") {
+            document.write('SỐ TIỀN LÀ:' + nhapsotien * 32000 + '' + 'vnd');
+        }
+    }
+
+</script>
+</html>
