@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính</title>
+  <link rel="stylesheet" href="mayTinh.css">
+</head>
+<body>
+<h1>Kết Quả</h1>
+<h2 id="kq"></h2>
+    <input class="oNhap" type="text" id="nhapSo1">
+    <input class="oNHap" type="text" id="nhapSo2">
+    <button  onclick="cong()">+</button>
+    <button  onclick="tru()">-</button>
+    <button  onclick="nhan()">x</button>
+    <button  onclick="chia()">:</button>
+<script>
+  function cong(){
+    let a=+document.getElementById("nhapSo1").value;
+    let b=+document.getElementById("nhapSo2").value;
+    let c=a+b;
+    document.getElementById('kq').innerHTML= c;
+  }
+  function tru(){
+    let a=+document.getElementById("nhapSo1").value;
+    let b=+document.getElementById("nhapSo2").value;
+    let c=a-b;
+    document.getElementById('kq').innerHTML= c;
+  }
+  function nhan(){
+    let a=+document.getElementById("nhapSo1").value;
+    let b=+document.getElementById("nhapSo2").value;
+    let c=a*b;
+    document.getElementById('kq').innerHTML= c;
+  }
+  function chia(){
+    let a=+document.getElementById("nhapSo1").value;
+    let b=+document.getElementById("nhapSo2").value;
+    let c=a/b;
+    document.getElementById('kq').innerHTML='Kết Quả' + c;
+
+  }
+</script>
+</body>
+</html>
